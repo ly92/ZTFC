@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardPromotionTableViewController">
+            <connections>
+                <outlet property="emptyView" destination="f7v-5d-oVE" id="6wc-GE-my7"/>
+                <outlet property="tv" destination="bSE-Jz-HkB" id="JDY-BX-ecJ"/>
+                <outlet property="view" destination="v8v-To-wPq" id="2Xi-V9-8zb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="v8v-To-wPq">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bSE-Jz-HkB">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="F5s-Um-E3b"/>
+                        <outlet property="delegate" destination="-1" id="ZfB-Ev-vUT"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7v-5d-oVE">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没有商家促销哟！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBp-Ou-Jrf">
+                            <rect key="frame" x="10" y="232" width="300" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c2_activity_empty" translatesAutoresizingMaskIntoConstraints="NO" id="f0w-Kh-W6a">
+                            <rect key="frame" x="120" y="132" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="8nQ-dr-F5j"/>
+                                <constraint firstAttribute="width" constant="80" id="Wm8-le-9do"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="sBp-Ou-Jrf" firstAttribute="top" secondItem="f0w-Kh-W6a" secondAttribute="bottom" constant="20" id="2XJ-y1-Lki"/>
+                        <constraint firstItem="sBp-Ou-Jrf" firstAttribute="leading" secondItem="f7v-5d-oVE" secondAttribute="leading" constant="10" id="Cms-xn-ayV"/>
+                        <constraint firstItem="sBp-Ou-Jrf" firstAttribute="centerY" secondItem="f7v-5d-oVE" secondAttribute="centerY" id="JCe-Fb-HoM"/>
+                        <constraint firstItem="f0w-Kh-W6a" firstAttribute="centerX" secondItem="f7v-5d-oVE" secondAttribute="centerX" id="bp4-d0-GJF"/>
+                        <constraint firstAttribute="trailing" secondItem="sBp-Ou-Jrf" secondAttribute="trailing" constant="10" id="sAZ-t9-gVO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="bSE-Jz-HkB" secondAttribute="trailing" id="BS2-U6-zg6"/>
+                <constraint firstItem="f7v-5d-oVE" firstAttribute="top" secondItem="v8v-To-wPq" secondAttribute="top" id="HLE-Or-BZR"/>
+                <constraint firstAttribute="bottom" secondItem="f7v-5d-oVE" secondAttribute="bottom" id="TpL-MG-KXE"/>
+                <constraint firstItem="f7v-5d-oVE" firstAttribute="leading" secondItem="v8v-To-wPq" secondAttribute="leading" id="ZJZ-6w-W8Q"/>
+                <constraint firstAttribute="trailing" secondItem="f7v-5d-oVE" secondAttribute="trailing" id="etd-HC-cWq"/>
+                <constraint firstItem="bSE-Jz-HkB" firstAttribute="leading" secondItem="v8v-To-wPq" secondAttribute="leading" id="gxk-J4-heZ"/>
+                <constraint firstAttribute="bottom" secondItem="bSE-Jz-HkB" secondAttribute="bottom" id="qOw-0c-8cp"/>
+                <constraint firstItem="bSE-Jz-HkB" firstAttribute="top" secondItem="v8v-To-wPq" secondAttribute="top" id="ypf-fC-E51"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="312" y="308"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="c2_activity_empty" width="100" height="100"/>
+    </resources>
+</document>

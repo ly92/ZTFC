@@ -1,0 +1,12 @@
+{
+  "name": "FishKit",
+  "_release": "d975bdf045",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d975bdf045828ecb2273eccec11316dc6a6318b9"
+  },
+  "_source": "http://git.geek-zoo.net/iOS/FishKit.git",
+  "_target": "*",
+  "_originalSource": "http://git.geek-zoo.net/iOS/FishKit.git"
+}

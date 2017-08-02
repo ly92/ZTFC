@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>radiusid</key>
+		<string>0</string>
+		<key>radius</key>
+		<string>500</string>
+	</dict>
+	<dict>
+		<key>radiusid</key>
+		<string>1</string>
+		<key>radius</key>
+		<string>1000</string>
+	</dict>
+	<dict>
+		<key>radiusid</key>
+		<string>2</string>
+		<key>radius</key>
+		<string>3000</string>
+	</dict>
+	<dict>
+		<key>radiusid</key>
+		<string>3</string>
+		<key>radius</key>
+		<string>5000</string>
+	</dict>
+	<dict>
+		<key>radiusid</key>
+		<string>4</string>
+		<key>radius</key>
+		<string>7000</string>
+	</dict>
+	<dict>
+		<key>radiusid</key>
+		<string>5</string>
+		<key>radius</key>
+		<string>9000</string>
+	</dict>
+	<dict>
+		<key>radiusid</key>
+		<string>6</string>
+		<key>radius</key>
+		<string>10000</string>
+	</dict>
+</array>
+</plist>

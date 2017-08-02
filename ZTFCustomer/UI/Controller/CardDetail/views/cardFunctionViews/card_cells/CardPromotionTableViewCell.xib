@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CardPromotionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d1_activity" translatesAutoresizingMaskIntoConstraints="NO" id="lqe-zq-P0h">
+                        <rect key="frame" x="8" y="8" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="dIX-w5-6yI"/>
+                            <constraint firstAttribute="width" constant="20" id="kb7-y4-ifd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="促销信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yc-fu-qk2">
+                        <rect key="frame" x="33" y="8" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Eky-5u-qZ3"/>
+                            <constraint firstAttribute="width" constant="100" id="Fs8-qQ-ufa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.98039215690000003" green="0.43137254899999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12小时前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BS-QZ-xQP">
+                        <rect key="frame" x="162" y="8" width="150" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Ydx-tg-DjW"/>
+                            <constraint firstAttribute="width" constant="150" id="hDU-cc-flJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="对话凤凰网发微博复活无法好好的风格还是等官方活动上规范化的故事发生" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="304" translatesAutoresizingMaskIntoConstraints="NO" id="6RX-hW-qZv">
+                        <rect key="frame" x="8" y="29" width="304" height="32"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W32-IK-WNm">
+                        <rect key="frame" x="8" y="0.0" width="304" height="1"/>
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="id0-bE-6zC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6RX-hW-qZv" firstAttribute="top" secondItem="6yc-fu-qk2" secondAttribute="bottom" id="26C-3m-9sD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="W32-IK-WNm" secondAttribute="trailing" id="3FB-9X-eH1"/>
+                    <constraint firstItem="5BS-QZ-xQP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="CP4-dL-FcC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6RX-hW-qZv" secondAttribute="bottom" id="EZs-kV-Ooz"/>
+                    <constraint firstItem="6yc-fu-qk2" firstAttribute="leading" secondItem="lqe-zq-P0h" secondAttribute="trailing" constant="5" id="F0u-b3-fU5"/>
+                    <constraint firstItem="6yc-fu-qk2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="GJC-pZ-W8n"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6RX-hW-qZv" secondAttribute="trailing" id="Ips-CV-3te"/>
+                    <constraint firstItem="lqe-zq-P0h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="KPY-29-rNN"/>
+                    <constraint firstItem="W32-IK-WNm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="azS-Nc-5Nx"/>
+                    <constraint firstItem="5BS-QZ-xQP" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cnf-gz-0st"/>
+                    <constraint firstItem="lqe-zq-P0h" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="nSE-0I-aE7"/>
+                    <constraint firstItem="W32-IK-WNm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="sp1-Kt-EyR"/>
+                    <constraint firstItem="6RX-hW-qZv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="svz-k8-WLZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentL" destination="6RX-hW-qZv" id="syL-ps-uZQ"/>
+                <outlet property="stypeL" destination="6yc-fu-qk2" id="KxR-SZ-XgV"/>
+                <outlet property="timeL" destination="5BS-QZ-xQP" id="u0M-pn-jar"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="d1_activity" width="24" height="24"/>
+    </resources>
+</document>

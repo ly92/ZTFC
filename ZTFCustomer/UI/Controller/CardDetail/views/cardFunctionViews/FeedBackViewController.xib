@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedBackViewController">
+            <connections>
+                <outlet property="feedbackText" destination="mlK-ys-1aw" id="Tnt-h8-4Ff"/>
+                <outlet property="sendBtn" destination="hwF-50-FdP" id="Dog-C7-u6J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKB-A5-cUS">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Xb-MK-ns4">
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYV-UZ-tvm">
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlK-ys-1aw" customClass="TextView">
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="mlK-ys-1aw" firstAttribute="leading" secondItem="ZYV-UZ-tvm" secondAttribute="leading" constant="10" id="HR7-jQ-MpC"/>
+                                        <constraint firstAttribute="bottom" secondItem="mlK-ys-1aw" secondAttribute="bottom" constant="10" id="bXJ-6M-l57"/>
+                                        <constraint firstAttribute="height" constant="200" id="i65-wh-7UQ"/>
+                                        <constraint firstItem="mlK-ys-1aw" firstAttribute="top" secondItem="ZYV-UZ-tvm" secondAttribute="top" constant="10" id="o2u-tc-r0C"/>
+                                        <constraint firstAttribute="trailing" secondItem="mlK-ys-1aw" secondAttribute="trailing" id="pa8-Ou-tk7"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwF-50-FdP">
+                                    <color key="backgroundColor" red="0.1529411765" green="0.63529411759999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="Nu8-QI-Wzk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="发送"/>
+                                    <connections>
+                                        <action selector="sureFeedBack:" destination="-1" eventType="touchUpInside" id="NrE-aa-hRM"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="ZYV-UZ-tvm" firstAttribute="leading" secondItem="4Xb-MK-ns4" secondAttribute="leading" constant="10" id="3H9-La-PcD"/>
+                                <constraint firstItem="hwF-50-FdP" firstAttribute="leading" secondItem="4Xb-MK-ns4" secondAttribute="leading" constant="20" id="49B-Pi-v7s"/>
+                                <constraint firstAttribute="trailing" secondItem="ZYV-UZ-tvm" secondAttribute="trailing" constant="10" id="6qJ-JY-guP"/>
+                                <constraint firstItem="ZYV-UZ-tvm" firstAttribute="top" secondItem="4Xb-MK-ns4" secondAttribute="top" constant="10" id="JDL-LA-8Gs"/>
+                                <constraint firstAttribute="height" constant="600" id="M6Z-zN-Xlq"/>
+                                <constraint firstItem="hwF-50-FdP" firstAttribute="top" secondItem="ZYV-UZ-tvm" secondAttribute="bottom" constant="20" id="WMV-ba-ODo"/>
+                                <constraint firstAttribute="trailing" secondItem="hwF-50-FdP" secondAttribute="trailing" constant="20" id="eZU-bU-YQa"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4Xb-MK-ns4" secondAttribute="trailing" id="4cR-b3-JZ3"/>
+                        <constraint firstItem="4Xb-MK-ns4" firstAttribute="top" secondItem="wKB-A5-cUS" secondAttribute="top" id="R7c-3m-6so"/>
+                        <constraint firstItem="4Xb-MK-ns4" firstAttribute="centerX" secondItem="wKB-A5-cUS" secondAttribute="centerX" id="qbN-Cr-kfX"/>
+                        <constraint firstAttribute="bottom" secondItem="4Xb-MK-ns4" secondAttribute="bottom" id="zfp-JI-QDW"/>
+                        <constraint firstItem="4Xb-MK-ns4" firstAttribute="leading" secondItem="wKB-A5-cUS" secondAttribute="leading" id="ziQ-Be-DY4"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wKB-A5-cUS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A7E-7u-wzp"/>
+                <constraint firstAttribute="trailing" secondItem="wKB-A5-cUS" secondAttribute="trailing" id="IAv-Hi-c5g"/>
+                <constraint firstItem="wKB-A5-cUS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LSD-Sp-Jph"/>
+                <constraint firstAttribute="bottom" secondItem="wKB-A5-cUS" secondAttribute="bottom" id="maR-I4-jCl"/>
+            </constraints>
+            <point key="canvasLocation" x="306" y="352"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

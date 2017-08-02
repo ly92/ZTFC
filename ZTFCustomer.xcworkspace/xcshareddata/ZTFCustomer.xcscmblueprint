@@ -1,0 +1,27 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "de3d54c7-4d4b-4562-a639-77ec82fdb220++7236",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "de3d54c7-4d4b-4562-a639-77ec82fdb220++7236" : {
+      "DVTSourceControlWorkingCopyRepositoryBranchesLocationKey" : "ZTFC\/branches",
+      "DVTSourceControlWorkingCopyRepositoryTagsLocationKey" : "ZTFC\/tags",
+      "DVTSourceControlWorkingCopyRepositoryPrimaryBranchLocationKey" : "ZTFC\/trunk\/"
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "de3d54c7-4d4b-4562-a639-77ec82fdb220++7236" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0FE78D5A-37E6-4B0B-8569-EB532586CCC6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "de3d54c7-4d4b-4562-a639-77ec82fdb220++7236" : "ztfc\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZTFCustomer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZTFCustomer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/svn.repos.kakatool.cn\/cardtoon_ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "de3d54c7-4d4b-4562-a639-77ec82fdb220++7236"
+    }
+  ]
+}

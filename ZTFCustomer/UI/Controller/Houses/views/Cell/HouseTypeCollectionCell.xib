@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ECY-4R-6w3" customClass="HouseTypeCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="170"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sws-L5-NkS">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="Bgv-V5-a1a"/>
+                            <constraint firstAttribute="width" constant="80" id="ERa-0q-dSE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C-12户型" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ca-N9-FQ6">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="wVu-UC-4me"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3室3厅2卫" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4ja-XR-RCd">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="yKQ-2s-3it"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="132平米" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjo-Jc-V7e">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Z9A-e8-VSP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Sws-L5-NkS" firstAttribute="centerX" secondItem="ECY-4R-6w3" secondAttribute="centerX" id="3iv-jZ-Q7T"/>
+                <constraint firstItem="3Ca-N9-FQ6" firstAttribute="leading" secondItem="ECY-4R-6w3" secondAttribute="leadingMargin" id="A1m-gs-SVr"/>
+                <constraint firstAttribute="trailingMargin" secondItem="4ja-XR-RCd" secondAttribute="trailing" id="Dq3-6f-Xpb"/>
+                <constraint firstItem="3Ca-N9-FQ6" firstAttribute="top" secondItem="Sws-L5-NkS" secondAttribute="bottom" constant="10" id="N17-Gq-7aY"/>
+                <constraint firstItem="4ja-XR-RCd" firstAttribute="leading" secondItem="ECY-4R-6w3" secondAttribute="leadingMargin" id="Qhf-Pt-OHX"/>
+                <constraint firstItem="Sws-L5-NkS" firstAttribute="top" secondItem="ECY-4R-6w3" secondAttribute="top" constant="10" id="Rkx-oR-EUo"/>
+                <constraint firstItem="4ja-XR-RCd" firstAttribute="top" secondItem="3Ca-N9-FQ6" secondAttribute="bottom" constant="5" id="SsG-eQ-qK5"/>
+                <constraint firstAttribute="trailingMargin" secondItem="Jjo-Jc-V7e" secondAttribute="trailing" id="Va2-oB-7GR"/>
+                <constraint firstItem="Jjo-Jc-V7e" firstAttribute="top" secondItem="4ja-XR-RCd" secondAttribute="bottom" constant="5" id="ahj-OS-pbd"/>
+                <constraint firstAttribute="trailingMargin" secondItem="3Ca-N9-FQ6" secondAttribute="trailing" id="c8t-xF-kxv"/>
+                <constraint firstItem="Jjo-Jc-V7e" firstAttribute="leading" secondItem="ECY-4R-6w3" secondAttribute="leadingMargin" id="f2p-2G-f67"/>
+            </constraints>
+            <size key="customSize" width="150" height="150"/>
+            <connections>
+                <outlet property="areaLbl" destination="Jjo-Jc-V7e" id="gkH-Dq-UVe"/>
+                <outlet property="houseTypeLbl" destination="3Ca-N9-FQ6" id="nIG-eY-fuS"/>
+                <outlet property="imgHeight" destination="Bgv-V5-a1a" id="Kc1-Uh-yuQ"/>
+                <outlet property="imgWidth" destination="ERa-0q-dSE" id="KmV-h7-6YW"/>
+                <outlet property="nameLbl" destination="4ja-XR-RCd" id="ugv-5X-H3g"/>
+                <outlet property="topImgView" destination="Sws-L5-NkS" id="AV7-GJ-a3v"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

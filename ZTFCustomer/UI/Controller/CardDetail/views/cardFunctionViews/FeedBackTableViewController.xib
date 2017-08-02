@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedBackTableViewController">
+            <connections>
+                <outlet property="emptyView" destination="SKQ-7J-xIi" id="Rqa-jv-F3W"/>
+                <outlet property="tv" destination="htJ-ai-eEE" id="zuL-Bh-0Iz"/>
+                <outlet property="view" destination="vL5-8S-YDg" id="l6M-e7-25o"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vL5-8S-YDg">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="htJ-ai-eEE">
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mgH-z8-a0H"/>
+                        <outlet property="delegate" destination="-1" id="62R-Yi-wiL"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKQ-7J-xIi">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e4_history_empty" translatesAutoresizingMaskIntoConstraints="NO" id="bdx-K6-1eD">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="JXY-AR-glV"/>
+                                <constraint firstAttribute="height" constant="100" id="tdu-6Z-wOK"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="没有历史记录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiT-ee-gDO">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="pbJ-Tc-c3g"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="IiT-ee-gDO" firstAttribute="top" secondItem="bdx-K6-1eD" secondAttribute="bottom" constant="30" id="0Sp-lj-sns"/>
+                        <constraint firstItem="bdx-K6-1eD" firstAttribute="centerY" secondItem="SKQ-7J-xIi" secondAttribute="centerY" constant="-15" id="1CO-MG-hFR"/>
+                        <constraint firstItem="IiT-ee-gDO" firstAttribute="leading" secondItem="SKQ-7J-xIi" secondAttribute="leading" constant="10" id="923-d6-x7d"/>
+                        <constraint firstItem="bdx-K6-1eD" firstAttribute="centerX" secondItem="SKQ-7J-xIi" secondAttribute="centerX" id="ywt-2F-agF"/>
+                        <constraint firstAttribute="trailing" secondItem="IiT-ee-gDO" secondAttribute="trailing" constant="10" id="zGV-jO-Yrc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="htJ-ai-eEE" secondAttribute="bottom" id="5El-hq-Yi4"/>
+                <constraint firstItem="SKQ-7J-xIi" firstAttribute="leading" secondItem="vL5-8S-YDg" secondAttribute="leading" id="7LO-Mc-uyH"/>
+                <constraint firstAttribute="bottom" secondItem="SKQ-7J-xIi" secondAttribute="bottom" id="NTR-6i-8Zh"/>
+                <constraint firstAttribute="trailing" secondItem="SKQ-7J-xIi" secondAttribute="trailing" id="UlF-5K-azC"/>
+                <constraint firstItem="SKQ-7J-xIi" firstAttribute="top" secondItem="vL5-8S-YDg" secondAttribute="top" id="ZSX-lR-1yc"/>
+                <constraint firstItem="htJ-ai-eEE" firstAttribute="leading" secondItem="vL5-8S-YDg" secondAttribute="leading" id="aF2-A1-9BZ"/>
+                <constraint firstItem="htJ-ai-eEE" firstAttribute="top" secondItem="vL5-8S-YDg" secondAttribute="top" id="fg9-MQ-iEE"/>
+                <constraint firstAttribute="trailing" secondItem="htJ-ai-eEE" secondAttribute="trailing" id="h1g-mB-8Kx"/>
+            </constraints>
+            <point key="canvasLocation" x="331" y="356"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="e4_history_empty" width="100" height="100"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

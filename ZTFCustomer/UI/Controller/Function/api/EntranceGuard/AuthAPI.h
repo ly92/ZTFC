@@ -1,0 +1,15 @@
+//
+//  AuthAPI.h
+//  EstateBiz
+//
+//  Created by wangshanshan on 16/6/13.
+//  Copyright © 2016年 Magicsoft. All rights reserved.
+//
+
+#import <YTKNetwork/YTKRequest.h>
+
+@interface AuthAPI : YTKRequest
+
+-(instancetype)initWithAutype:(NSString *)autype mobile:(NSString *)mobile bid:(NSString *)bid usertype:(NSString *)usertype granttype:(NSString *)granttype starttime:(NSString *)starttime stoptime:(NSString *)stoptime memo:(NSString *)memo;
+
+@end

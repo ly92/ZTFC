@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SearchCardCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1W-Zh-Lck">
+                        <rect key="frame" x="8" y="8" width="312" height="71"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w23-OV-VLe">
+                                <rect key="frame" x="10" y="0.0" width="80" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="kY6-MF-emU"/>
+                                    <constraint firstAttribute="width" constant="80" id="zbK-hd-bNV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="休闲馆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsc-fc-kqN">
+                                <rect key="frame" x="100" y="0.0" width="202" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Q0b-Ol-EgF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="餐饮美食" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlP-0L-F8D">
+                                <rect key="frame" x="100" y="25" width="202" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1MQ-0u-H42"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_get_icon" translatesAutoresizingMaskIntoConstraints="NO" id="YUy-ds-Mlm">
+                                <rect key="frame" x="271" y="54" width="41" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="Uys-aZ-DJH"/>
+                                    <constraint firstAttribute="width" constant="41" id="Zl4-Xb-oE2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rlP-0L-F8D" firstAttribute="top" secondItem="lsc-fc-kqN" secondAttribute="bottom" constant="5" id="B4F-fn-dog"/>
+                            <constraint firstItem="w23-OV-VLe" firstAttribute="leading" secondItem="y1W-Zh-Lck" secondAttribute="leading" constant="10" id="IQR-Pa-zyE"/>
+                            <constraint firstAttribute="trailing" secondItem="YUy-ds-Mlm" secondAttribute="trailing" id="Ile-5z-gRq"/>
+                            <constraint firstAttribute="trailing" secondItem="rlP-0L-F8D" secondAttribute="trailing" constant="10" id="Q52-eu-l4n"/>
+                            <constraint firstItem="rlP-0L-F8D" firstAttribute="leading" secondItem="w23-OV-VLe" secondAttribute="trailing" constant="10" id="S3Z-hc-ypi"/>
+                            <constraint firstItem="lsc-fc-kqN" firstAttribute="top" secondItem="y1W-Zh-Lck" secondAttribute="top" id="Znw-fH-BF8"/>
+                            <constraint firstAttribute="bottom" secondItem="YUy-ds-Mlm" secondAttribute="bottom" id="kiK-ub-mpS"/>
+                            <constraint firstItem="lsc-fc-kqN" firstAttribute="leading" secondItem="w23-OV-VLe" secondAttribute="trailing" constant="10" id="lzP-bd-2e8"/>
+                            <constraint firstAttribute="trailing" secondItem="lsc-fc-kqN" secondAttribute="trailing" constant="10" id="u7S-Nk-Y3i"/>
+                            <constraint firstItem="w23-OV-VLe" firstAttribute="top" secondItem="y1W-Zh-Lck" secondAttribute="top" id="xmw-sf-7Uz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="y1W-Zh-Lck" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-8" id="GTU-bU-GOX"/>
+                    <constraint firstItem="y1W-Zh-Lck" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="SIM-3a-rUD"/>
+                    <constraint firstItem="y1W-Zh-Lck" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YyZ-YI-i3l"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="y1W-Zh-Lck" secondAttribute="trailing" constant="-8" id="chn-o6-uiA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="y1W-Zh-Lck" secondAttribute="bottom" constant="-7.5" id="d6g-hj-20k"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="GTU-bU-GOX"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon" destination="w23-OV-VLe" id="vF6-KA-KnB"/>
+                <outlet property="introLbl" destination="rlP-0L-F8D" id="pBr-uX-kbS"/>
+                <outlet property="markImg" destination="YUy-ds-Mlm" id="VZz-Jf-dSk"/>
+                <outlet property="nameLbl" destination="lsc-fc-kqN" id="bdS-UO-tQz"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="search_get_icon" width="41" height="17"/>
+    </resources>
+</document>

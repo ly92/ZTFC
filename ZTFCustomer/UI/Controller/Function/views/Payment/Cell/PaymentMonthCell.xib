@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaymentMonthCell" id="gTV-IL-0wX" customClass="PaymentMonthCell">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJq-vr-rzu">
+                        <rect key="frame" x="0.0" y="11" width="120" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.23137254900000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金额" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijz-pi-o0a">
+                        <rect key="frame" x="0.0" y="34" width="120" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.74901960784313726" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bJq-vr-rzu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BpR-Id-4t4"/>
+                <constraint firstItem="ijz-pi-o0a" firstAttribute="top" secondItem="bJq-vr-rzu" secondAttribute="bottom" constant="5" id="JcE-zW-A3O"/>
+                <constraint firstAttribute="trailing" secondItem="bJq-vr-rzu" secondAttribute="trailing" id="MP3-ic-g12"/>
+                <constraint firstItem="ijz-pi-o0a" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SiY-5J-vV7"/>
+                <constraint firstAttribute="trailing" secondItem="ijz-pi-o0a" secondAttribute="trailing" id="bnH-W4-BYA"/>
+                <constraint firstItem="bJq-vr-rzu" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-10" id="qZf-jr-lvP"/>
+            </constraints>
+            <connections>
+                <outlet property="moneyLabel" destination="ijz-pi-o0a" id="3NG-k8-zJX"/>
+                <outlet property="timeLabel" destination="bJq-vr-rzu" id="rTJ-W8-10l"/>
+            </connections>
+            <point key="canvasLocation" x="-47" y="221"/>
+        </collectionViewCell>
+    </objects>
+</document>

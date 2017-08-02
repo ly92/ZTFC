@@ -1,0 +1,93 @@
+//
+//  ztfCustomer.pch
+//  ztfCustomer
+//
+//  Created by wangshanshan on 16/6/28.
+//  Copyright © 2016年 Magicsoft. All rights reserved.
+//
+
+//#ifndef ztfCustomer_pch
+//#define ztfCustomer_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+// 只要添加了这个宏，就不用带mas_前缀
+#define MAS_SHORTHAND
+// 只要添加了这个宏，equalTo就等价于mas_equalTo
+#define MAS_SHORTHAND_GLOBALS
+// 这个头文件一定要放在上面两个宏的后面
+
+//cocoa框架
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+//配置文件
+#import "AppConfig.h"
+//统一样式
+#import "Style.h"
+
+//基类
+#import "RDVTabBarController.h"
+#import "SBNavigationController.h"
+#import "WebViewController.h"
+#import "BaseNetConfig.h"
+
+#import "AFNetWorking.h"
+//#import "AppTheme.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import <ShareSDKUI/ShareSDKUI.h>
+#import <ShareSDKUI/SSUIShareActionSheetStyle.h>
+//自定义分享编辑界面所需要导入的头文件
+#import <ShareSDKUI/SSUIEditorViewStyle.h>
+//极光推送
+#import "JPUSHService.h"
+//极光统计,极光推送和极光统计共用一个jcore-ios-1.0.0.a文件，如果同时需要集成jpush和janalytics，只需要导入一个jcore-ios-1.0.0.a文件即可
+#import "JANALYTICSService.h"
+#import "AppDelegate.h"
+#import "WXApi.h"
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "WeiboSDK.h"
+#import "MJRefresh.h"
+#import "SVProgressHUD.h"
+#import "MJExtension.h"
+#import "YYKit.h"
+#import "Masonry.h"
+//#import "Harpy.h"
+#import "UIAlertView+BlocksKit.h"
+#import "EaseUI.h"
+#import "UITableView+SDAutoTableViewCellHeight.h"
+#import "UIView+SDAutoLayout.h"
+#import "UIPlaceHolderTextView.h"
+#import "UIScrollView+EmptyDataSet.h"
+#import "HuanxinService.h"
+
+
+#import "home-module.h"
+#import "AppLocation.h"
+#import "login-module.h"
+#import "surrounding-module.h"
+#import "cardDetail-module.h"
+#import "message-module.h"
+#import "function-module.h"
+#import "scan-module.h"
+#import "personcenter-module.h"
+#import "houses-module.h"
+#import "push-module.h"
+#import "mydrop-module.h"
+#import "LocalData.h"
+
+#endif
+
+//#endif /* ztfCustomer_pch */

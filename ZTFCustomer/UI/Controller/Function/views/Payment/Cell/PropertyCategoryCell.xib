@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PropertyCategoryCell" rowHeight="35" id="KGk-i7-Jjw" customClass="PropertyCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f2_point_grey" translatesAutoresizingMaskIntoConstraints="NO" id="FHC-JA-ZcG">
+                        <rect key="frame" x="20" y="15" width="4" height="4"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="4" id="dIh-zt-E0U"/>
+                            <constraint firstAttribute="height" constant="4" id="dws-gR-UTZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="项目名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M36-ya-yvI">
+                        <rect key="frame" x="34" y="0.0" width="57.5" height="35"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.23137254900000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金额" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUF-RS-rvk">
+                        <rect key="frame" x="276" y="0.0" width="29" height="35"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.23137254900000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="M36-ya-yvI" secondAttribute="bottom" id="AsF-Az-Da8"/>
+                    <constraint firstAttribute="trailing" secondItem="fUF-RS-rvk" secondAttribute="trailing" constant="15" id="F00-pU-8Ec"/>
+                    <constraint firstItem="fUF-RS-rvk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="G54-DB-yIz"/>
+                    <constraint firstAttribute="bottom" secondItem="fUF-RS-rvk" secondAttribute="bottom" id="Qjv-7F-2dx"/>
+                    <constraint firstItem="FHC-JA-ZcG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="dhA-Oa-aXL"/>
+                    <constraint firstItem="M36-ya-yvI" firstAttribute="leading" secondItem="FHC-JA-ZcG" secondAttribute="trailing" constant="10" id="itA-Or-cI0"/>
+                    <constraint firstItem="M36-ya-yvI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wNY-Nh-k01"/>
+                    <constraint firstItem="fUF-RS-rvk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M36-ya-yvI" secondAttribute="trailing" constant="10" id="xTd-a0-DeB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FHC-JA-ZcG" firstAttribute="centerY" secondItem="KGk-i7-Jjw" secondAttribute="centerY" id="jRf-lo-Yb4"/>
+            </constraints>
+            <connections>
+                <outlet property="propertyMoney" destination="fUF-RS-rvk" id="hDH-Af-7eB"/>
+                <outlet property="propertyName" destination="M36-ya-yvI" id="bFR-xS-70E"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="f2_point_grey" width="8" height="8"/>
+    </resources>
+</document>

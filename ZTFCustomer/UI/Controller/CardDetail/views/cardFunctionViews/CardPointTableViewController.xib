@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardPointTableViewController">
+            <connections>
+                <outlet property="emptyView" destination="eNA-gm-vNo" id="wUg-d2-hNy"/>
+                <outlet property="tv" destination="OQD-FX-fCq" id="3dX-7F-dql"/>
+                <outlet property="view" destination="Id4-VC-Zwb" id="twK-3t-sRe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Id4-VC-Zwb">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OQD-FX-fCq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="XHC-Zs-xkn"/>
+                        <outlet property="delegate" destination="-1" id="epd-4w-3dj"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-gm-vNo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="还没有积分记录哟～" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="7Vi-sL-Wq7">
+                            <rect key="frame" x="0.0" y="325" width="375" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e4_record_empty" translatesAutoresizingMaskIntoConstraints="NO" id="jIV-cQ-B1k">
+                            <rect key="frame" x="142.5" y="205" width="90" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="0oY-YF-W7p"/>
+                                <constraint firstAttribute="width" constant="90" id="sGJ-Nw-DFT"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7Vi-sL-Wq7" secondAttribute="trailing" id="9WG-R6-EcW"/>
+                        <constraint firstItem="7Vi-sL-Wq7" firstAttribute="leading" secondItem="eNA-gm-vNo" secondAttribute="leading" id="EnJ-Yy-8vl"/>
+                        <constraint firstItem="7Vi-sL-Wq7" firstAttribute="top" secondItem="jIV-cQ-B1k" secondAttribute="bottom" constant="20" id="MZc-JZ-hv3"/>
+                        <constraint firstItem="jIV-cQ-B1k" firstAttribute="centerX" secondItem="eNA-gm-vNo" secondAttribute="centerX" id="aUC-jv-CiF"/>
+                        <constraint firstItem="7Vi-sL-Wq7" firstAttribute="centerY" secondItem="eNA-gm-vNo" secondAttribute="centerY" id="mek-pi-6EC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eNA-gm-vNo" secondAttribute="bottom" id="5dT-cV-he5"/>
+                <constraint firstAttribute="bottom" secondItem="OQD-FX-fCq" secondAttribute="bottom" id="L8G-kD-rmf"/>
+                <constraint firstAttribute="trailing" secondItem="eNA-gm-vNo" secondAttribute="trailing" id="TG6-4W-Jow"/>
+                <constraint firstItem="eNA-gm-vNo" firstAttribute="top" secondItem="Id4-VC-Zwb" secondAttribute="top" id="Td3-GO-Utb"/>
+                <constraint firstAttribute="trailing" secondItem="OQD-FX-fCq" secondAttribute="trailing" id="b7e-Vv-49R"/>
+                <constraint firstItem="eNA-gm-vNo" firstAttribute="leading" secondItem="Id4-VC-Zwb" secondAttribute="leading" id="g2a-tp-R7S"/>
+                <constraint firstItem="OQD-FX-fCq" firstAttribute="leading" secondItem="Id4-VC-Zwb" secondAttribute="leading" id="glX-2c-bVE"/>
+                <constraint firstItem="OQD-FX-fCq" firstAttribute="top" secondItem="Id4-VC-Zwb" secondAttribute="top" id="xPs-Ti-t0s"/>
+            </constraints>
+            <point key="canvasLocation" x="297" y="339"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="e4_record_empty" width="100" height="100"/>
+    </resources>
+</document>
