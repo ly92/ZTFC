@@ -85,7 +85,7 @@
 //    }else{
 //        self.searchTxt = [[UITextField alloc]initWithFrame:CGRectMake(30, 0,SCREENWIDTH-100 , 30)];
 //    }
-//    self.searchTxt.placeholder = @"搜索置业顾问";
+//    self.searchTxt.placeholder = @"搜索楼栋管家";
 //    self.searchTxt.backgroundColor = [UIColor clearColor];
 //    //187 194 199
 //    [self.searchTxt setValue:RGBACOLOR(187, 194, 199, 1.0) forKeyPath:@"_placeholderLabel.textColor"];

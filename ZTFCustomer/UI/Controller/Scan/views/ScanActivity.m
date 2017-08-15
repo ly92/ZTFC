@@ -419,7 +419,7 @@
         }
         
         
-        //扫码添加会员，绑定置业顾问
+        //扫码添加会员，绑定楼栋管家
         //http://app.kakatool.cn/app.php?appid=202&employee_id=xxx&project_id=xxxx
         
         if ([[scanValue lowercaseString] containsString:@"http://app.kakatool.cn/app.php?"] && [[scanValue lowercaseString] containsString:@"employee_id"] ) {
@@ -461,9 +461,9 @@
                             PropertyConstrulantDetailController *propertyConsultantDetainCon = [PropertyConstrulantDetailController spawn];
                             propertyConsultantDetainCon.communityId = propertyConstrulantModel.project.community_id;
                             propertyConsultantDetainCon.propertyModel = propertyConstrulantModel;
-                            //取消绑定置业顾问成功
+                            //取消绑定楼栋管家成功
                             propertyConsultantDetainCon.cancelBindingBlock = ^(){
-                                //获取置业顾问数据，刷新列表
+                                //获取楼栋管家数据，刷新列表
                                 
                                 
                             };
@@ -709,7 +709,7 @@
         NSDictionary *result = (NSDictionary *)request.responseJSONObject;
         NSDictionary *content = result[@"content"];
         if (![ISNull isNilOfSender:result] && [result[@"code"] intValue] == 0 ) {
-            //绑定成功之后返回的是顾问实体,返回到首页进行获取置业顾问信息显示
+            //绑定成功之后返回的是顾问实体,返回到首页进行获取楼栋管家信息显示
             NSDictionary *employee = content[@"employee"];
             PropertyConstrulantModel *employeeModel = [PropertyConstrulantModel mj_objectWithKeyValues:employee];
             

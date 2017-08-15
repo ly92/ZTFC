@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -542,10 +542,10 @@
             </objects>
             <point key="canvasLocation" x="1346" y="259"/>
         </scene>
-        <!--置业顾问详情-->
+        <!--楼栋管家详情-->
         <scene sceneID="rUR-SB-ove">
             <objects>
-                <viewController storyboardIdentifier="PropertyConstrulantDetailController" id="KVn-dL-S6h" userLabel="置业顾问详情" customClass="PropertyConstrulantDetailController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PropertyConstrulantDetailController" id="KVn-dL-S6h" userLabel="楼栋管家详情" customClass="PropertyConstrulantDetailController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xgm-tT-zus"/>
                         <viewControllerLayoutGuide type="bottom" id="dbn-KH-Kla"/>
@@ -595,10 +595,10 @@
             </objects>
             <point key="canvasLocation" x="1719" y="215"/>
         </scene>
-        <!--切换置业顾问-->
+        <!--切换楼栋管家-->
         <scene sceneID="ADb-nj-Xe2">
             <objects>
-                <viewController storyboardIdentifier="ChangePropertyConstrulantController" id="3H5-iG-8HJ" userLabel="切换置业顾问" customClass="ChangePropertyConstrulantController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePropertyConstrulantController" id="3H5-iG-8HJ" userLabel="切换楼栋管家" customClass="ChangePropertyConstrulantController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9U7-ag-oPO"/>
                         <viewControllerLayoutGuide type="bottom" id="XR3-vo-kV0"/>

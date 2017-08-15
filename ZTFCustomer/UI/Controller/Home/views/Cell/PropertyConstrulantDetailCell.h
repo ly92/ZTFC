@@ -27,7 +27,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *mobileButton;
 @property (weak, nonatomic) IBOutlet UIButton *smsButton;
-//更换置业顾问
+//更换楼栋管家
 @property (weak, nonatomic) IBOutlet UIButton *changePropertyButton;
 
 @end

@@ -66,7 +66,7 @@
         self.iconimageView.contentMode =  UIViewContentModeScaleAspectFill;
         self.iconimageView.clipsToBounds = YES;
         
-        self.propertyLbl.text = @"置业顾问";
+        self.propertyLbl.text = @"楼栋管家";
         self.nameLbl.text = model.name;
         self.nameLbl.hidden = NO;
         self.propertyLblWidth.constant = 60;
@@ -120,13 +120,13 @@
         self.starView.hidden = YES;
         
         self.nameLbl.hidden = YES;
-        self.propertyLbl.text = @"未绑定置业顾问";
+        self.propertyLbl.text = @"未绑定楼栋管家";
         
         CGFloat propertyWidth = [self.propertyLbl resizeWidth];
         self.propertyLblWidth.constant = propertyWidth;
         self.propertyLbl.textColor = [UIColor grayColor];
         
-        self.saleRankLbl.text = @"立即绑定置业顾问";
+        self.saleRankLbl.text = @"立即绑定楼栋管家";
         self.saleRankLbl.textColor = [UIColor blackColor];
         self.chtView.hidden = YES;
         self.chatButton.hidden = YES;

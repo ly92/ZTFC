@@ -117,11 +117,11 @@
 //推荐卡列表
 #define HOME_RECOMMANDCARD_LIST @"v1/membercard/recommendcard"
 
-#pragma mark - 置业顾问
-#define HOME_EMPLOYEE_LIST @"YDSL/member/employee/search"//获取置业顾问列表
-#define HOME_EMPLOYEE_DETAIL @"YDSL/member/employee/detail"//获取置业顾问详情
-#define HOME_EMPLOYEE_BIND @"YDSL/member/employee/bind"//绑定置业顾问
-#define HOME_ENPLOYEE_UNBIND @"YDSL/member/employee/unbind"//解绑置业顾问
+#pragma mark - 楼栋管家
+#define HOME_EMPLOYEE_LIST @"YDSL/member/employee/search"//获取楼栋管家列表
+#define HOME_EMPLOYEE_DETAIL @"YDSL/member/employee/detail"//获取楼栋管家详情
+#define HOME_EMPLOYEE_BIND @"YDSL/member/employee/bind"//绑定楼栋管家
+#define HOME_ENPLOYEE_UNBIND @"YDSL/member/employee/unbind"//解绑楼栋管家
 #define HOME_EMPLOYEE_MESSAGE_LIST @"YDSL/member/message/search"//获取顾问消息列表
 #define HOME_EMPLOYEE_MESSAGE_DETAIL @"YDSL/member/message/detail"//获取顾问消息详情
 
@@ -129,7 +129,7 @@
 #define HOME_GETEMPLOYEE_MESSAGE_PUSH @"YDSL/member/message/count"//获取顾问消息的推送消息计数
 #define HOME_CLEAREMPLOYEE_MESSAGE_PUSH @"YDSL/member/message/markRead"//会员清顾问消息的推送除消息计数
 
-#define HOME_MYEMPLOYEE @"YDSL/member/employee/mine"//获取我的置业顾问
+#define HOME_MYEMPLOYEE @"YDSL/member/employee/mine"//获取我的楼栋管家
 
 
 #define HOME_COMMUNITY_LIST @"YDSL/member/communitys"//获取所有的小区列表

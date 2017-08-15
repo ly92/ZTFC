@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-//置业顾问列表cell
+//楼栋管家列表cell
 @protocol PropertyConsultantCellDelegate <NSObject>
 
 -(void)chatClick;

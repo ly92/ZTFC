@@ -93,7 +93,7 @@
     }else{
         self.searchTxt = [[UITextField alloc]initWithFrame:CGRectMake(30, 0,SCREENWIDTH-120 , 30)];
     }
-    self.searchTxt.placeholder = @"搜索置业顾问";
+    self.searchTxt.placeholder = @"搜索楼栋管家";
     self.searchTxt.backgroundColor = [UIColor clearColor];
     //187 194 199
     [self.searchTxt setValue:RGBACOLOR(187, 194, 199, 1.0) forKeyPath:@"_placeholderLabel.textColor"];
@@ -262,7 +262,7 @@
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1) {
         
-        //绑定成功（无论是从首页跳转，还是从置业顾问详情挑转，均返回首页,同时刷新首页数据)
+        //绑定成功（无论是从首页跳转，还是从楼栋管家详情挑转，均返回首页,同时刷新首页数据)
         [[BaseNetConfig shareInstance] configGlobalAPI:ICE];
         [self presentLoadingTips:nil];
          UserModel *userModel = [[LocalData shareInstance]getUserAccount];
@@ -273,7 +273,7 @@
             NSDictionary *result = (NSDictionary *)request.responseJSONObject;
             NSDictionary *content = result[@"content"];
             if (![ISNull isNilOfSender:result] && [result[@"code"] intValue] == 0 ) {
-                //绑定成功之后返回的是顾问实体,返回到首页进行获取置业顾问信息显示
+                //绑定成功之后返回的是顾问实体,返回到首页进行获取楼栋管家信息显示
                 NSDictionary *employee = content[@"employee"];
                 PropertyConstrulantModel *employeeModel = [PropertyConstrulantModel mj_objectWithKeyValues:employee];
                 

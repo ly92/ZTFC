@@ -286,13 +286,13 @@ static NSString *noMemberCardIdentifier = @"NoMemberCardCell";
     //积分充值,积分消费
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(loadMyMemberCardData) name:@"pointsTransaction" object:nil];
     
-    //绑定置业顾问成功
+    //绑定楼栋管家成功
     [self fk_observeNotifcation:@"BingingSuccess" usingBlock:^(NSNotification *note) {
       
         [self openDoorChangeCommunity:note];
         
     }];
-    //取消绑定置业顾问
+    //取消绑定楼栋管家
     [self fk_observeNotifcation:@"CANCELBINDING" usingBlock:^(NSNotification *note) {
         [self loadPropertyConstulantData];
 
@@ -850,7 +850,7 @@ static NSString *noMemberCardIdentifier = @"NoMemberCardCell";
     
 }
 
-#pragma mark - 获取置业顾问数据(
+#pragma mark - 获取楼栋管家数据(
 -(void)loadPropertyConstulantData{
     
     [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
@@ -1961,9 +1961,9 @@ static NSString *noMemberCardIdentifier = @"NoMemberCardCell";
         //顾问详情
         PropertyConstrulantDetailController *propertyConsultantDetainCon = [PropertyConstrulantDetailController spawn];
         propertyConsultantDetainCon.propertyModel = self.propertyConstrulantModel;
-        //取消绑定置业顾问成功
+        //取消绑定楼栋管家成功
         propertyConsultantDetainCon.cancelBindingBlock = ^(){
-            //获取置业顾问数据，刷新列表
+            //获取楼栋管家数据，刷新列表
             
             [self loadPropertyConstulantData];
             
@@ -1986,9 +1986,9 @@ static NSString *noMemberCardIdentifier = @"NoMemberCardCell";
             //顾问详情
             PropertyConstrulantDetailController *propertyConsultantDetainCon = [PropertyConstrulantDetailController spawn];
             propertyConsultantDetainCon.propertyModel = self.propertyConstrulantModel;
-            //取消绑定置业顾问成功
+            //取消绑定楼栋管家成功
             propertyConsultantDetainCon.cancelBindingBlock = ^(){
-                //获取置业顾问数据，刷新列表
+                //获取楼栋管家数据，刷新列表
                 [self loadPropertyConstulantData];
 
             };

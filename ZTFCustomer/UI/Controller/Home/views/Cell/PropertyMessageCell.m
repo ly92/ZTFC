@@ -151,7 +151,7 @@
     if (self.isSteward) {
         _nameLbl.text = [NSString stringWithFormat:@"专属管家%@",propertyMessageModel.employee.name.length>0?propertyMessageModel.employee.name:@""];
     }else{
-        _nameLbl.text = [NSString stringWithFormat:@"置业顾问%@",propertyMessageModel.employee.name.length>0?propertyMessageModel.employee.name:@""];
+        _nameLbl.text = [NSString stringWithFormat:@"楼栋管家%@",propertyMessageModel.employee.name.length>0?propertyMessageModel.employee.name:@""];
     }
     _contentLbl.text = propertyMessageModel.content;
     
@@ -236,7 +236,7 @@
     if (self.isSteward) {
         _nameLbl.text = [NSString stringWithFormat:@"专属管家%@",propertyMessageDetailModel.employee.name.length>0?propertyMessageDetailModel.employee.name:@""];
     }else{
-        _nameLbl.text = [NSString stringWithFormat:@"置业顾问%@",propertyMessageDetailModel.employee.name.length>0?propertyMessageDetailModel.employee.name:@""];
+        _nameLbl.text = [NSString stringWithFormat:@"楼栋管家%@",propertyMessageDetailModel.employee.name.length>0?propertyMessageDetailModel.employee.name:@""];
     }
     _contentLbl.text = propertyMessageDetailModel.content;
     

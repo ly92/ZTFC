@@ -12,7 +12,7 @@
 @class HousesModel;
 @class TeamModel;
 
-//置业顾问模型
+//楼栋管家模型
 @interface PropertyConstrulantModel : NSObject<NSCoding>
 
 

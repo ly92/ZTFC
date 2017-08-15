@@ -65,7 +65,7 @@
         
         [self.stewardIconImg setImageWithURL:[NSURL URLWithString:@""] placeholder:SaleHeadImage];
         
-        self.propertyNameLbl.text = [NSString stringWithFormat:@"置业顾问：%@",model.name];
+        self.propertyNameLbl.text = [NSString stringWithFormat:@"楼栋管家：%@",model.name];
         
         
     }else{
@@ -76,7 +76,7 @@
         self.bindBtn.hidden = NO;
         self.consultBtn.hidden = YES;
         self.propertyIconImg.image = SaleHeadImage;
-        self.propertyNameLbl.text = @"未绑定置业顾问";
+        self.propertyNameLbl.text = @"未绑定楼栋管家";
     }
 }
 

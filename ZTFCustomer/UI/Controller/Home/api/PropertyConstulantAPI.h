@@ -9,8 +9,8 @@
 #import <YTKNetwork/YTKRequest.h>
 
 typedef NS_ENUM(NSInteger,PROPERTYCONSTULANTINFO) {
-    ISBINDPROPERTY,//首页置业顾问信息
-    CHATUSERINFO//置业顾问列表
+    ISBINDPROPERTY,//首页楼栋管家信息
+    CHATUSERINFO//楼栋管家列表
 };
 
 //获取首页顾问信息

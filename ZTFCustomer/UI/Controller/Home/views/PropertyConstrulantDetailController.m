@@ -50,7 +50,7 @@
         self.dataArray = @[@"专属管家",@"工      号",@"所属小区",@"手机号码"];
         
     }else{
-    self.dataArray = @[@"置业顾问",@"工      号",@"所属团队",@"销售等级",@"手机号码"];
+    self.dataArray = @[@"楼栋管家",@"工      号",@"所属团队",@"销售等级",@"手机号码"];
     }
     
     
@@ -84,7 +84,7 @@
         self.navigationItem.title = @"专属管家详情";
         self.cancelBindBtn.hidden = YES;
     }else{
-        self.navigationItem.title = @"置业顾问详情";
+        self.navigationItem.title = @"楼栋管家详情";
         self.cancelBindBtn.hidden = NO;
     }
     
@@ -301,7 +301,7 @@
 }
 
 #pragma mark-PropertyConstrulantDetailCellDelegate
-//切换置业顾问
+//切换楼栋管家
 -(void)changePropertyClick{
     ChangePropertyConstrulantController *change = [ChangePropertyConstrulantController spawn];
     [self.navigationController pushViewController:change animated:YES];

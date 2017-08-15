@@ -29,7 +29,7 @@
 
 #pragma mark-click
 
-//切换置业顾问
+//切换楼栋管家
 - (IBAction)changePropertyButtonClick:(id)sender {
     if ([self.delegate respondsToSelector:@selector(changePropertyClick)]) {
         [self.delegate changePropertyClick];

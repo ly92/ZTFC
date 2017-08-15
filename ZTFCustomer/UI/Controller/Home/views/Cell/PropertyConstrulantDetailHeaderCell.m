@@ -58,7 +58,7 @@
             self.nameLbl.text = [NSString stringWithFormat:@"专属管家  %@",propertyDetailModel.name];
         }else{
             self.starView.hidden = NO;
-            self.nameLbl.text = [NSString stringWithFormat:@"专属置业顾问  %@",propertyDetailModel.name];
+            self.nameLbl.text = [NSString stringWithFormat:@"专属楼栋管家  %@",propertyDetailModel.name];
         }
         
          self.rankLevelLbl.text = propertyDetailModel.star_name;
