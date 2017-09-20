@@ -14,6 +14,8 @@
 #import "HouseTypeCollectionCell.h"
 #import "HouseBookController.h"
 #import "MWPhotoBrowser.h"
+#import "HouseDynamicModel.h"
+
 @interface HouseDetailController ()<UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate,MWPhotoBrowserDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewHeight;
@@ -259,6 +261,9 @@
         return;
     }
     
+    //楼盘动态数据
+    [self loadHouseDynamicData];
+    
     [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
     [self presentLoadingTips:nil];
     HouseDetailAPI *houseDetailApi = [[HouseDetailAPI alloc]initWithHoustId:self.project_id];
@@ -290,6 +295,43 @@
     }];
     
 }
+
+//楼盘动态列表
+-(void)loadHouseDynamicData{
+    
+    [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
+    HouseDynamicListApi *houseDynamicListApi = [[HouseDynamicListApi alloc]initWithProjectId:self.project_id skip:@"0" limit:@"1"];
+    [houseDynamicListApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        [self doneLoadingTableViewData];
+        
+        NSDictionary *result = (NSDictionary *)request.responseJSONObject;
+        NSDictionary *content = result[@"content"];
+        if (![ISNull isNilOfSender:content] && [result[@"code"] intValue] == 0) {
+            
+            NSArray *list = content[@"list"];
+            
+            if (list.count > 0){
+                HouseDynamicModel *houseDynamicModel = [HouseDynamicModel mj_objectWithKeyValues:list[0]];
+                self.houseDynamicTitleLbl.text = houseDynamicModel.progress_title;
+                self.houseDynamicLbl.text = houseDynamicModel.progress_introduce;
+                CGFloat houseDynamicHeight = [self.houseDynamicLbl resizeHeight];
+                if (houseDynamicHeight > 20) {
+                    self.houseDynamicViewH.constant = houseDynamicHeight + 65;
+                }else{
+                    self.houseDynamicViewH.constant = 20 + 65;
+                }
+                self.containerViewHeight.constant = 650-200 + self.headViewHeight.constant - 70 + self.addressViewHeight.constant - 40 +self.introductionViewHeight.constant - 160 + self.houseDynamicViewH.constant + 10 + self.houseTypeViewHeight.constant;
+                
+
+            }
+        }
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        
+    }];
+    
+}
+
+
 -(void)loadPropertyConsultane{
     [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
 //    UserModel *userModel = [[LocalData shareInstance]getUserAccount];
@@ -351,14 +393,6 @@
         self.priceLbl.text = [NSString stringWithFormat:@"%@元／㎡起",self.houseDetailModel.average_price];
         self.mobileLbl.text = self.houseDetailModel.tel;
         
-        self.houseDynamicTitleLbl.text = @"1234242";
-        self.houseDynamicLbl.text = self.houseDetailModel.intro;
-        CGFloat houseDynamicHeight = [self.houseDynamicLbl resizeHeight];
-        if (houseDynamicHeight > 20) {
-            self.houseDynamicViewH.constant = houseDynamicHeight + 65;
-        }else{
-            self.houseDynamicViewH.constant = 20 + 37;
-        }
         
         
         self.introductionLbl.text = self.houseDetailModel.intro;
@@ -613,26 +647,24 @@
 //楼盘动态
 - (IBAction)houseDynamicAction {
     MorewHouseTypeController *moreHouseType = [MorewHouseTypeController spawn];
-    
     moreHouseType.isHouseDynamic = YES;
-    
-    
+    moreHouseType.projectModel = self.houseDetailModel;
     [self.navigationController pushViewController:moreHouseType animated:YES];
 }
 
 //业主推荐
 - (IBAction)recommendAction {
-    
+//    WebViewController *webView = [WebViewController spawn];
+//    webView.webTitle = @"房贷计算器";
+//    webView.webURL = @"http://fdzj.999ccc.cn/mob/html/fangdaijisuanqi/fangdaijisuanqi.html";
+//    [self.navigationController pushViewController:webView animated:YES];
 }
 
 //更多户型
 - (IBAction)moreHouseTypeButtonClick:(id)sender {
    
     MorewHouseTypeController *moreHouseType = [MorewHouseTypeController spawn];
-    
     moreHouseType.projectModel = self.houseDetailModel;
-    
-    
     [self.navigationController pushViewController:moreHouseType animated:YES];
     
 }

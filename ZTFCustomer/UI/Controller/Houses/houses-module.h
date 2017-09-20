@@ -19,3 +19,5 @@
 #import "HouseTypeCollectAPI.h"
 #import "HouseTypeListAPI.h"
 #import "NearestCityAPI.h"
+#import "HouseDynamicListApi.h"
+#import "HouseDynamicDetailApi.h"

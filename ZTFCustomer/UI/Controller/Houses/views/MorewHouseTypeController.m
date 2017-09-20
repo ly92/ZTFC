@@ -10,11 +10,14 @@
 #import "MoreHouseTypeCell.h"
 #import "HouseTypeDetailController.h"
 #import "HouseDynamicCell.h"
+#import "HouseDynamicModel.h"
+#import "HouseDynamicViewController.h"
 
 @interface MorewHouseTypeController ()<UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tv;
 
 @property (nonatomic, strong) NSMutableArray *housetypeDataArray;
+@property (nonatomic, strong) NSMutableArray *houseDynamiceDataArray;
 @property (nonatomic, copy) NSString *limit;
 @property (nonatomic, copy) NSString *skip;
 
@@ -79,11 +82,19 @@
     return _housetypeDataArray;
 }
 
+-(NSMutableArray *)houseDynamiceDataArray{
+    if (!_houseDynamiceDataArray) {
+        _houseDynamiceDataArray = [NSMutableArray array];
+    }
+    return _houseDynamiceDataArray;
+}
+
 #pragma mark - request
 -(void)loadNewData{
     self.skip = @"0";
     if (self.isHouseDynamic) {
-        
+        [self.houseDynamiceDataArray removeAllObjects];
+        [self loadHouseDynamicData];
     }else{
         [self.housetypeDataArray removeAllObjects];
         [self loadData];
@@ -93,12 +104,14 @@
 -(void)loadMoreData{
     self.skip  =[NSString stringWithFormat:@"%d", [self.limit intValue] + [self.skip intValue]];
     if (self.isHouseDynamic){
-        
+        [self loadHouseDynamicData];
     }else{
         [self loadData];
     }
     
 }
+
+//户型列表
 -(void)loadData{
     
     [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
@@ -139,11 +152,51 @@
     
 }
 
+//楼盘动态列表
+-(void)loadHouseDynamicData{
+    
+    [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
+    HouseDynamicListApi *houseDynamicListApi = [[HouseDynamicListApi alloc]initWithProjectId:self.projectModel.project_id skip:self.skip limit:self.limit];
+    [houseDynamicListApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        [self doneLoadingTableViewData];
+        
+        NSDictionary *result = (NSDictionary *)request.responseJSONObject;
+        NSDictionary *content = result[@"content"];
+        if (![ISNull isNilOfSender:content] && [result[@"code"] intValue] == 0) {
+            
+            NSArray *list = content[@"list"];
+            for (NSDictionary *dic in list) {
+                HouseDynamicModel *houseDynamicModel = [HouseDynamicModel mj_objectWithKeyValues:dic];
+                [self.houseDynamiceDataArray addObject:houseDynamicModel];
+            }
+            
+            if (self.houseDynamiceDataArray.count == 0) {
+                self.tv.emptyDataSetSource = self;
+                self.tv.emptyDataSetDelegate = self;
+            }
+            
+            if (list.count < [self.limit intValue]) {
+                [self loadAll];
+            }else{
+                [self resetLoadAll];
+            }
+            [self.tv reloadData];
+            
+        }else{
+            [self presentFailureTips:result[@"message"]];
+        }
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        [self doneLoadingTableViewData];
+        [self presentFailureTips:[NSString stringWithFormat:@"网络错误,%ld",(long)request.responseStatusCode]];
+    }];
+    
+}
+
 #pragma mark - tableview delegate
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (self.isHouseDynamic){
-        return 0;
+        return self.houseDynamiceDataArray.count;
     }else{
         return self.housetypeDataArray.count;
     }
@@ -154,7 +207,9 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.isHouseDynamic){
         HouseDynamicCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HouseDynamicCell" forIndexPath:indexPath];
-        
+        if (self.houseDynamiceDataArray.count > indexPath.row){
+            cell.data = self.houseDynamiceDataArray[indexPath.row];
+        }
         
         return cell;
     }else{
@@ -182,6 +237,12 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (self.isHouseDynamic){
+        if (self.houseDynamiceDataArray.count > indexPath.row){
+            HouseDynamicModel *model = self.houseDynamiceDataArray[indexPath.row];
+            HouseDynamicViewController *houseDynamicDetail = [HouseDynamicViewController spawn];
+            houseDynamicDetail.projectProgressId = model.project_progress_id;
+            [self.navigationController pushViewController:houseDynamicDetail animated:YES];
+        }
         
     }else{
         if (self.housetypeDataArray.count> indexPath.row) {

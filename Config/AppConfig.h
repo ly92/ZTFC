@@ -193,9 +193,9 @@
 
 #define PROJECT_HOUSETYPE_LIST @"YDSL/member/houseType/list"//户型列表
 #define PROJECT_HOUSETYPE_COLLECT @"YDSL/member/houseType/favorite"//户型收藏
-
 #define PROJECT_HOUSETYPE_CANCELCOLLECT @"YDSL/member/houseType/favoriteRevoke"//取消户型收藏
-
+#define PROJECT_HOUSEDYNAMIC_LIST @"YDSL/member/projectProgress/search"//楼盘动态列表
+#define PROJECT_HOUSEDYNAMIC_DETAIL @"YDSL/member/projectProgress/detail"//楼盘动态详情
 #define PROJECT_APPOINTMENT_LIST @"YDSL/member/appointment/listByProject"//楼盘详情预约历史
 #define PERSON_APPOINTMENT_LIST @"YDSL/member/appointment/listMine"//个人中心我的预约看房列表
 #define CANCEL_APPOINTMENT @"YDSL/member/appointment/cancel"//取消预约

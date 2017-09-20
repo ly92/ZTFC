@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HouseDynamicCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *timeLbl;
-@property (weak, nonatomic) IBOutlet UILabel *titleLbl;
-@property (weak, nonatomic) IBOutlet UIImageView *iconImgV;
-@property (weak, nonatomic) IBOutlet UILabel *descLbl;
+
 
 @end

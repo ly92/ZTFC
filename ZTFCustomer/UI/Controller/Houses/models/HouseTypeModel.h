@@ -28,10 +28,10 @@
 
 @property (nonatomic, strong) HousesModel *project;
 @property (nonatomic, copy) NSString *project_id;
-
-
-
 @end
+
+
+
 
 
 

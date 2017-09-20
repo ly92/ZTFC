@@ -737,6 +737,10 @@
 		04F0A4C81E00E0E000D87F02 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0A4C71E00E0E000D87F02 /* ShareViewController.m */; };
 		0807DB9C1F72AE600070A309 /* HouseDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0807DB9A1F72AE600070A309 /* HouseDynamicCell.m */; };
 		0807DB9D1F72AE600070A309 /* HouseDynamicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0807DB9B1F72AE600070A309 /* HouseDynamicCell.xib */; };
+		0807DBA01F72B9460070A309 /* HouseDynamicListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0807DB9F1F72B9460070A309 /* HouseDynamicListApi.m */; };
+		0807DBA31F72BD820070A309 /* HouseDynamicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0807DBA21F72BD820070A309 /* HouseDynamicModel.m */; };
+		0807DBA61F72C6D10070A309 /* HouseDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0807DBA51F72C6D10070A309 /* HouseDynamicViewController.m */; };
+		0807DBA91F72C8310070A309 /* HouseDynamicDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 0807DBA81F72C8310070A309 /* HouseDynamicDetailApi.m */; };
 		087761EB1DCC6EB20016D68D /* CollectHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 087761EA1DCC6EB20016D68D /* CollectHouseViewController.m */; };
 		087761EF1DCC75780016D68D /* CollectHouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 087761ED1DCC75780016D68D /* CollectHouseCell.m */; };
 		087761F01DCC75780016D68D /* CollectHouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087761EE1DCC75780016D68D /* CollectHouseCell.xib */; };
@@ -2139,6 +2143,14 @@
 		0807DB991F72AE600070A309 /* HouseDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDynamicCell.h; sourceTree = "<group>"; };
 		0807DB9A1F72AE600070A309 /* HouseDynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDynamicCell.m; sourceTree = "<group>"; };
 		0807DB9B1F72AE600070A309 /* HouseDynamicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseDynamicCell.xib; sourceTree = "<group>"; };
+		0807DB9E1F72B9460070A309 /* HouseDynamicListApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDynamicListApi.h; sourceTree = "<group>"; };
+		0807DB9F1F72B9460070A309 /* HouseDynamicListApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDynamicListApi.m; sourceTree = "<group>"; };
+		0807DBA11F72BD820070A309 /* HouseDynamicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDynamicModel.h; sourceTree = "<group>"; };
+		0807DBA21F72BD820070A309 /* HouseDynamicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDynamicModel.m; sourceTree = "<group>"; };
+		0807DBA41F72C6D10070A309 /* HouseDynamicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDynamicViewController.h; sourceTree = "<group>"; };
+		0807DBA51F72C6D10070A309 /* HouseDynamicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDynamicViewController.m; sourceTree = "<group>"; };
+		0807DBA71F72C8310070A309 /* HouseDynamicDetailApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDynamicDetailApi.h; sourceTree = "<group>"; };
+		0807DBA81F72C8310070A309 /* HouseDynamicDetailApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDynamicDetailApi.m; sourceTree = "<group>"; };
 		087761E91DCC6EB20016D68D /* CollectHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectHouseViewController.h; sourceTree = "<group>"; };
 		087761EA1DCC6EB20016D68D /* CollectHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectHouseViewController.m; sourceTree = "<group>"; };
 		087761EC1DCC75780016D68D /* CollectHouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectHouseCell.h; sourceTree = "<group>"; };
@@ -4283,6 +4295,10 @@
 				049C77651DDD8D2400311EE9 /* HouseTypeCollectAPI.m */,
 				042EF9921DDDBA48007EA295 /* HouseTypeListAPI.h */,
 				042EF9931DDDBA48007EA295 /* HouseTypeListAPI.m */,
+				0807DB9E1F72B9460070A309 /* HouseDynamicListApi.h */,
+				0807DB9F1F72B9460070A309 /* HouseDynamicListApi.m */,
+				0807DBA71F72C8310070A309 /* HouseDynamicDetailApi.h */,
+				0807DBA81F72C8310070A309 /* HouseDynamicDetailApi.m */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -4299,6 +4315,8 @@
 				12AE19C11D96950400A12751 /* city.db */,
 				12AE19BF1D96911300A12751 /* CityDatabase.h */,
 				12AE19BE1D96911300A12751 /* CityDatabase.m */,
+				0807DBA11F72BD820070A309 /* HouseDynamicModel.h */,
+				0807DBA21F72BD820070A309 /* HouseDynamicModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -4326,6 +4344,8 @@
 				043FF1BD1D8E3DAE0021E808 /* HouseTypeDetailController.m */,
 				043FF1C51D8E3DAE0021E808 /* MorewHouseTypeController.h */,
 				043FF1C61D8E3DAE0021E808 /* MorewHouseTypeController.m */,
+				0807DBA41F72C6D10070A309 /* HouseDynamicViewController.h */,
+				0807DBA51F72C6D10070A309 /* HouseDynamicViewController.m */,
 				043FF1B51D8E3DAE0021E808 /* HouseBookController.h */,
 				043FF1B61D8E3DAE0021E808 /* HouseBookController.m */,
 				04CE61511DDED7A40062F23F /* SelectPropertyController.h */,
@@ -5722,6 +5742,7 @@
 				04CAC42B1D8FD4100086DC9F /* IncomeViewController.m in Sources */,
 				043FF3861D8E3DAE0021E808 /* ChatUserManager.m in Sources */,
 				043FF3791D8E3DAE0021E808 /* PropertyConstulantAPI.m in Sources */,
+				0807DBA01F72B9460070A309 /* HouseDynamicListApi.m in Sources */,
 				043FF3291D8E3DAE0021E808 /* SelectCommunityAPI.m in Sources */,
 				043FF3DC1D8E3DAE0021E808 /* MessageAPI.m in Sources */,
 				126EB2C51DCF31B1006A130B /* PropertyMessageCell.m in Sources */,
@@ -5767,9 +5788,11 @@
 				04CAC41D1D8F82370086DC9F /* MyBookDetailController.m in Sources */,
 				040F825A1DDB20E60060FD73 /* GetPropertyMessagePushAPI.m in Sources */,
 				043FF38D1D8E3DAE0021E808 /* HomeActivityCell.m in Sources */,
+				0807DBA91F72C8310070A309 /* HouseDynamicDetailApi.m in Sources */,
 				043FF42D1D8E3DAF0021E808 /* SearchSurroundingViewController.m in Sources */,
 				040A270D1D938A8F00B3E8D4 /* ConfirmOrderListCell.m in Sources */,
 				043FF2D91D8E3DAE0021E808 /* CardOrderTableViewCell.m in Sources */,
+				0807DBA31F72BD820070A309 /* HouseDynamicModel.m in Sources */,
 				043FEF7F1D8E3CA40021E808 /* EaseViewController.m in Sources */,
 				043FF3A51D8E3DAE0021E808 /* ChatViewController.m in Sources */,
 				043FED5E1D8E3C2F0021E808 /* UIDevice+Hardware.m in Sources */,
@@ -6044,6 +6067,7 @@
 				043FF40C1D8E3DAF0021E808 /* UpdatePushAmountsAPI.m in Sources */,
 				043FEF9F1D8E3CA40021E808 /* split.c in Sources */,
 				043FED8E1D8E3C2F0021E808 /* UITextView+helper.m in Sources */,
+				0807DBA61F72C6D10070A309 /* HouseDynamicViewController.m in Sources */,
 				043FF3D51D8E3DAE0021E808 /* LoginViewController.m in Sources */,
 				043FF3D01D8E3DAE0021E808 /* login-module.m in Sources */,
 				043FF3021D8E3DAE0021E808 /* CLMealTicketPaySuccessViewController.m in Sources */,

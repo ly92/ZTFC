@@ -81,7 +81,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3m9-Iw-0k3">
-                                <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                <rect key="frame" x="8" y="12" width="304" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="VoN-Em-ncy"/>
                                 </constraints>
@@ -95,9 +95,9 @@
                             <constraint firstAttribute="trailing" secondItem="d1O-oP-Fca" secondAttribute="trailing" constant="8" id="10Y-MZ-m1f"/>
                             <constraint firstItem="d1O-oP-Fca" firstAttribute="leading" secondItem="ecv-Sm-YZ7" secondAttribute="leading" constant="8" id="H9t-Qf-euY"/>
                             <constraint firstAttribute="bottom" secondItem="d1O-oP-Fca" secondAttribute="bottom" constant="8" id="bRS-9Y-Tgj"/>
-                            <constraint firstItem="d1O-oP-Fca" firstAttribute="top" secondItem="3m9-Iw-0k3" secondAttribute="bottom" constant="8" id="gOy-oF-sRs"/>
+                            <constraint firstItem="d1O-oP-Fca" firstAttribute="top" secondItem="3m9-Iw-0k3" secondAttribute="bottom" constant="4" id="gOy-oF-sRs"/>
                             <constraint firstAttribute="trailing" secondItem="3m9-Iw-0k3" secondAttribute="trailing" constant="8" id="jle-gK-j7y"/>
-                            <constraint firstItem="3m9-Iw-0k3" firstAttribute="top" secondItem="ecv-Sm-YZ7" secondAttribute="top" constant="8" id="qwB-0l-5Js"/>
+                            <constraint firstItem="3m9-Iw-0k3" firstAttribute="top" secondItem="ecv-Sm-YZ7" secondAttribute="top" constant="12" id="qwB-0l-5Js"/>
                             <constraint firstItem="3m9-Iw-0k3" firstAttribute="leading" secondItem="ecv-Sm-YZ7" secondAttribute="leading" constant="8" id="ucu-gp-Z5h"/>
                         </constraints>
                     </view>
