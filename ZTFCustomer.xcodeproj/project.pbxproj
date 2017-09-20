@@ -735,6 +735,8 @@
 		04EAD83B1D8E68C6000F102F /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EAD83A1D8E68C6000F102F /* SettingController.m */; };
 		04EAD87E1D8E7C26000F102F /* MyDropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EAD87D1D8E7C26000F102F /* MyDropController.m */; };
 		04F0A4C81E00E0E000D87F02 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0A4C71E00E0E000D87F02 /* ShareViewController.m */; };
+		0807DB9C1F72AE600070A309 /* HouseDynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0807DB9A1F72AE600070A309 /* HouseDynamicCell.m */; };
+		0807DB9D1F72AE600070A309 /* HouseDynamicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0807DB9B1F72AE600070A309 /* HouseDynamicCell.xib */; };
 		087761EB1DCC6EB20016D68D /* CollectHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 087761EA1DCC6EB20016D68D /* CollectHouseViewController.m */; };
 		087761EF1DCC75780016D68D /* CollectHouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 087761ED1DCC75780016D68D /* CollectHouseCell.m */; };
 		087761F01DCC75780016D68D /* CollectHouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087761EE1DCC75780016D68D /* CollectHouseCell.xib */; };
@@ -2134,6 +2136,9 @@
 		04F0A4C61E00E0E000D87F02 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		04F0A4C71E00E0E000D87F02 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		04F832B81D9B9E2F007902A7 /* ZTFCustomer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZTFCustomer.entitlements; sourceTree = "<group>"; };
+		0807DB991F72AE600070A309 /* HouseDynamicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HouseDynamicCell.h; sourceTree = "<group>"; };
+		0807DB9A1F72AE600070A309 /* HouseDynamicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HouseDynamicCell.m; sourceTree = "<group>"; };
+		0807DB9B1F72AE600070A309 /* HouseDynamicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseDynamicCell.xib; sourceTree = "<group>"; };
 		087761E91DCC6EB20016D68D /* CollectHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectHouseViewController.h; sourceTree = "<group>"; };
 		087761EA1DCC6EB20016D68D /* CollectHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectHouseViewController.m; sourceTree = "<group>"; };
 		087761EC1DCC75780016D68D /* CollectHouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectHouseCell.h; sourceTree = "<group>"; };
@@ -4344,6 +4349,9 @@
 				0497F51D1D94FD980036F3A6 /* CityListCell.h */,
 				0497F51E1D94FD980036F3A6 /* CityListCell.m */,
 				0497F51F1D94FD980036F3A6 /* CityListCell.xib */,
+				0807DB991F72AE600070A309 /* HouseDynamicCell.h */,
+				0807DB9A1F72AE600070A309 /* HouseDynamicCell.m */,
+				0807DB9B1F72AE600070A309 /* HouseDynamicCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -5421,6 +5429,7 @@
 				043FF3111D8E3DAE0021E808 /* SubscribeMerchantViewController.xib in Resources */,
 				043FF3EF1D8E3DAF0021E808 /* VoteTableViewCell.xib in Resources */,
 				04D153BE1E0151400018C28C /* WeiboSDK.bundle in Resources */,
+				0807DB9D1F72AE600070A309 /* HouseDynamicCell.xib in Resources */,
 				043FF2E21D8E3DAE0021E808 /* FeedbackTableViewCell.xib in Resources */,
 				043FF3D41D8E3DAE0021E808 /* Login.storyboard in Resources */,
 				043FF3931D8E3DAE0021E808 /* MemberCardCell.xib in Resources */,
@@ -6105,6 +6114,7 @@
 				043FEF6E1D8E3CA40021E808 /* NSDateFormatter+Category.m in Sources */,
 				043FF4001D8E3DAF0021E808 /* ModifyPswController.m in Sources */,
 				087761EF1DCC75780016D68D /* CollectHouseCell.m in Sources */,
+				0807DB9C1F72AE600070A309 /* HouseDynamicCell.m in Sources */,
 				043FF2C71D8E3DAE0021E808 /* SubscribeMerchantAPI.m in Sources */,
 				043FF2CE1D8E3DAE0021E808 /* CardTransactionDetailModel.m in Sources */,
 				043FF41D1D8E3DAF0021E808 /* SurroundingCommunityAPI.m in Sources */,

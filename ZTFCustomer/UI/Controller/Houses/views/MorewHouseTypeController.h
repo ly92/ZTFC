@@ -12,4 +12,5 @@
 
 @property (nonatomic, strong) HousesModel *projectModel;
 
+@property (nonatomic, assign) BOOL isHouseDynamic;//是否为楼盘动态
 @end

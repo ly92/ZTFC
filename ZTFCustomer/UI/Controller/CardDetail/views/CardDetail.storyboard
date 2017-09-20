@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -304,7 +304,7 @@
                             <constraint firstItem="38Y-QD-hV4" firstAttribute="top" secondItem="j9o-mF-5oT" secondAttribute="top" id="VBi-4O-Ujn"/>
                             <constraint firstItem="JPw-lf-5xN" firstAttribute="top" secondItem="ian-c2-zpB" secondAttribute="bottom" id="eQO-gH-xFx"/>
                             <constraint firstItem="JPw-lf-5xN" firstAttribute="leading" secondItem="j9o-mF-5oT" secondAttribute="leading" id="lHQ-ES-ZLw"/>
-                            <constraint firstItem="1ZG-fs-VFc" firstAttribute="top" secondItem="38Y-QD-hV4" secondAttribute="bottom" id="lXL-JV-HhX"/>
+                            <constraint firstAttribute="bottom" secondItem="38Y-QD-hV4" secondAttribute="bottom" id="oQh-ue-h1h"/>
                             <constraint firstItem="1ZG-fs-VFc" firstAttribute="top" secondItem="JPw-lf-5xN" secondAttribute="bottom" id="sA0-bm-ahq"/>
                             <constraint firstAttribute="trailing" secondItem="38Y-QD-hV4" secondAttribute="trailing" id="tnz-bJ-9fL"/>
                         </constraints>
@@ -316,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfh-5u-Ykn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510.5" y="105.5"/>
+            <point key="canvasLocation" x="1566" y="70"/>
         </scene>
         <!--会员卡详情-->
         <scene sceneID="f7n-cl-C0A">
@@ -1110,7 +1110,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qe-bH-gIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571.5" y="105.5"/>
+            <point key="canvasLocation" x="196" y="70"/>
         </scene>
     </scenes>
     <resources>

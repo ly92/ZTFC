@@ -9,6 +9,8 @@
 #import "MorewHouseTypeController.h"
 #import "MoreHouseTypeCell.h"
 #import "HouseTypeDetailController.h"
+#import "HouseDynamicCell.h"
+
 @interface MorewHouseTypeController ()<UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tv;
 
@@ -34,18 +36,18 @@
     
     [self setHeaderAndFooter];
     [self.tv registerNib:@"MoreHouseTypeCell" identifier:@"MoreHouseTypeCell"];
+    [self.tv registerNib:@"HouseDynamicCell" identifier:@"HouseDynamicCell"];
     
     self.skip = @"0";
     self.limit = @"10";
     [self initloading];
     
-    [self fk_observeNotifcation:@"OPERATEHOUSETYPESUCCESS" usingBlock:^(NSNotification *note) {
-        HouseTypeModel *houseTypModel = (HouseTypeModel *)note.object;
-        [self.housetypeDataArray replaceObjectAtIndex:self.currentRow withObject:houseTypModel];
-    }];
-    
-   
-    
+    if (!self.isHouseDynamic){
+        [self fk_observeNotifcation:@"OPERATEHOUSETYPESUCCESS" usingBlock:^(NSNotification *note) {
+            HouseTypeModel *houseTypModel = (HouseTypeModel *)note.object;
+            [self.housetypeDataArray replaceObjectAtIndex:self.currentRow withObject:houseTypModel];
+        }];
+    }
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -59,7 +61,11 @@
 }
 #pragma mark - navibar
 -(void)setNavigationBar{
-    self.navigationItem.title = @"更多户型";
+    if (self.isHouseDynamic){
+        self.navigationItem.title = @"楼盘动态";
+    }else{
+        self.navigationItem.title = @"更多户型";
+    }
     self.navigationItem.leftBarButtonItem = [AppTheme backItemWithHandler:^(id sender) {
         [self.navigationController popViewControllerAnimated:YES];
     }];
@@ -76,13 +82,22 @@
 #pragma mark - request
 -(void)loadNewData{
     self.skip = @"0";
-    [self.housetypeDataArray removeAllObjects];
-    [self loadData];
+    if (self.isHouseDynamic) {
+        
+    }else{
+        [self.housetypeDataArray removeAllObjects];
+        [self loadData];
+    }
 }
 
 -(void)loadMoreData{
     self.skip  =[NSString stringWithFormat:@"%d", [self.limit intValue] + [self.skip intValue]];
-    [self loadData];
+    if (self.isHouseDynamic){
+        
+    }else{
+        [self loadData];
+    }
+    
 }
 -(void)loadData{
     
@@ -98,7 +113,7 @@
             NSArray *houseTypes = content[@"houseTypes"];
             for (NSDictionary *dic in houseTypes) {
                 HouseTypeModel *housetypeModel = [HouseTypeModel mj_objectWithKeyValues:dic];
-                 housetypeModel.mobile =self.projectModel.tel;
+                housetypeModel.mobile =self.projectModel.tel;
                 [self.housetypeDataArray addObject:housetypeModel];
             }
             
@@ -127,56 +142,77 @@
 #pragma mark - tableview delegate
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (self.isHouseDynamic){
+        return 0;
+    }else{
+        return self.housetypeDataArray.count;
+    }
     
-    return self.housetypeDataArray.count;
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    MoreHouseTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoreHouseTypeCell" forIndexPath:indexPath];
-    
-    if (self.housetypeDataArray.count> indexPath.row) {
-        cell.data = self.housetypeDataArray[indexPath.row];
+    if (self.isHouseDynamic){
+        HouseDynamicCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HouseDynamicCell" forIndexPath:indexPath];
+        
+        
+        return cell;
+    }else{
+        MoreHouseTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MoreHouseTypeCell" forIndexPath:indexPath];
+        
+        if (self.housetypeDataArray.count> indexPath.row) {
+            cell.data = self.housetypeDataArray[indexPath.row];
+        }
+        
+        return cell;
     }
     
-    return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 95;
+    if (self.isHouseDynamic){
+        return 350;
+    }else{
+        return 95;
+    }
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (self.housetypeDataArray.count> indexPath.row) {
-        HouseTypeModel *houseTypeModel = self.housetypeDataArray[indexPath.row];
-        HouseTypeDetailController *houseTypeDetail = [HouseTypeDetailController spawn];
-        houseTypeDetail.projectId = self.projectModel.project_id;
-        houseTypeDetail.houseTypeModel = houseTypeModel;
-        self.currentRow = indexPath.row;
-        [self.navigationController pushViewController:houseTypeDetail animated:YES];
+    if (self.isHouseDynamic){
+        
+    }else{
+        if (self.housetypeDataArray.count> indexPath.row) {
+            HouseTypeModel *houseTypeModel = self.housetypeDataArray[indexPath.row];
+            HouseTypeDetailController *houseTypeDetail = [HouseTypeDetailController spawn];
+            houseTypeDetail.projectId = self.projectModel.project_id;
+            houseTypeDetail.houseTypeModel = houseTypeModel;
+            self.currentRow = indexPath.row;
+            [self.navigationController pushViewController:houseTypeDetail animated:YES];
+        }
     }
     
-//    HouseTypeDetailController *houseTypeDetail = [HouseTypeDetailController spawn];
-//    [self.navigationController pushViewController:houseTypeDetail animated:YES];
+    
+    
+    //    HouseTypeDetailController *houseTypeDetail = [HouseTypeDetailController spawn];
+    //    [self.navigationController pushViewController:houseTypeDetail animated:YES];
 }
 
 -(UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView{
-     return [UIImage imageNamed:@"noactivity"];
+    return [UIImage imageNamed:@"noactivity"];
 }
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

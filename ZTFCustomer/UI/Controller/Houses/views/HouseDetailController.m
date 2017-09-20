@@ -55,6 +55,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *callButton;
 @property (weak, nonatomic) IBOutlet UIButton *bookButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *houseDynamicTitleLbl;
+@property (weak, nonatomic) IBOutlet UILabel *houseDynamicLbl;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *houseDynamicViewH;
+
+
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSArray *headImageArr;
 @property (nonatomic, strong) NSMutableArray *houseTypeDataArr;
@@ -346,6 +351,16 @@
         self.priceLbl.text = [NSString stringWithFormat:@"%@元／㎡起",self.houseDetailModel.average_price];
         self.mobileLbl.text = self.houseDetailModel.tel;
         
+        self.houseDynamicTitleLbl.text = @"1234242";
+        self.houseDynamicLbl.text = self.houseDetailModel.intro;
+        CGFloat houseDynamicHeight = [self.houseDynamicLbl resizeHeight];
+        if (houseDynamicHeight > 20) {
+            self.houseDynamicViewH.constant = houseDynamicHeight + 65;
+        }else{
+            self.houseDynamicViewH.constant = 20 + 37;
+        }
+        
+        
         self.introductionLbl.text = self.houseDetailModel.intro;
         
         CGFloat introductionHeight = [self.introductionLbl resizeHeight];
@@ -384,7 +399,7 @@
         //如果户型的个数<=3, 隐藏“更多户型 >”
         
         [self.collectionView reloadData];
-        self.containerViewHeight.constant = 650-200 + self.headViewHeight.constant - 70 + self.addressViewHeight.constant - 40 +self.introductionViewHeight.constant - 160 + self.houseTypeViewHeight.constant;
+        self.containerViewHeight.constant = 650-200 + self.headViewHeight.constant - 70 + self.addressViewHeight.constant - 40 +self.introductionViewHeight.constant - 160 + self.houseDynamicViewH.constant + 10 + self.houseTypeViewHeight.constant;
         
     }
 }
@@ -595,6 +610,20 @@
     
 }
 
+//楼盘动态
+- (IBAction)houseDynamicAction {
+    MorewHouseTypeController *moreHouseType = [MorewHouseTypeController spawn];
+    
+    moreHouseType.isHouseDynamic = YES;
+    
+    
+    [self.navigationController pushViewController:moreHouseType animated:YES];
+}
+
+//业主推荐
+- (IBAction)recommendAction {
+    
+}
 
 //更多户型
 - (IBAction)moreHouseTypeButtonClick:(id)sender {
