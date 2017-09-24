@@ -32,7 +32,7 @@
     return YTKRequestMethodPOST;
 }
 -(id)requestArgument{
-    return @{@"project_id":@"36",
+    return @{@"project_id":_projectId,
              @"skip":_skip,
              @"limit":_limit};
 }
