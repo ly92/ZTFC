@@ -5408,7 +5408,7 @@
 					043FE88A1D8E30F40021E808 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = NBHLFYA79A;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -6410,8 +6410,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicsoft.ztfcustomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "6dc8fc48-666c-4deb-b73b-338d1f1b59ed";
+				PROVISIONING_PROFILE_SPECIFIER = AppZTFCDEV;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -6424,7 +6424,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = ZTFCustomer/ZTFCustomer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = NBHLFYA79A;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -6454,8 +6454,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicsoft.ztfcustomer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "cc61d16f-6b3d-4ffd-a6c9-5b486804a199";
+				PROVISIONING_PROFILE_SPECIFIER = AppZTFCStore;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
