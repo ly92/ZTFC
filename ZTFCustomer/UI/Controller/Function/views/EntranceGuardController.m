@@ -104,8 +104,11 @@ static NSString *noCommonGuardIdentifier = @"NoCommonGuardCell";
     //判断是否有授权权限
     [self checkAuthGranted];
     
+    //统计数据
+    [self statisticsAction];
     
 }
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -118,6 +121,20 @@ static NSString *noCommonGuardIdentifier = @"NoCommonGuardCell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+//统计数据
+- (void)statisticsAction{
+    UserModel *user = [[LocalData shareInstance]getUserAccount];
+    Community *community = [STICache.global objectForKey:[NSString stringWithFormat:@"%@_crcc",user.mobile]];
+    StatisticsGlobalAPI *statisticsApi = [[StatisticsGlobalAPI alloc] initWithtypeId:@"1" communityId:community.bid];
+    [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
+    [statisticsApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+    }];
+}
+
+
 
 -(void)updateViewConstraints{
     [self autoArrangeBoxWithConstraints:@[self.btn1Leading,self.btn2Leading,self.btn3Leading] width:self.btnWidth.constant];

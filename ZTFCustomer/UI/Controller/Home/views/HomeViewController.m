@@ -1049,7 +1049,10 @@ static NSString *noMemberCardIdentifier = @"NoMemberCardCell";
         
         weatherCell.selectionStyle = UITableViewCellSelectionStyleNone;
         weatherCell.msgDetail = ^(AdModel *adModel){
-                
+            
+            //数据统计
+            [self statisticsActionTypeId:@"5"];
+            
             CardMsgDetailViewController *msgAd = [CardMsgDetailViewController spawn];
             msgAd.isAd = YES;
             msgAd.adModel = adModel;
@@ -1471,9 +1474,28 @@ static NSString *noMemberCardIdentifier = @"NoMemberCardCell";
    
     
 }
+
+//统计数据
+- (void)statisticsActionTypeId:(NSString *)typeId{
+    NSString *communityId = @"";
+    if ([typeId isEqualToString:@"5"]){
+        UserModel *user = [[LocalData shareInstance]getUserAccount];
+        Community *community = [STICache.global objectForKey:[NSString stringWithFormat:@"%@_crcc",user.mobile]];
+        communityId = community.bid;
+    }
+    StatisticsGlobalAPI *statisticsApi = [[StatisticsGlobalAPI alloc] initWithtypeId:typeId communityId:communityId];
+    [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
+    [statisticsApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+    }];
+}
+
 //跳转会员卡详情
 -(void)goToCardDetail:(MemberCardModel *)surrounding{
     //饭票商城（cardtype ==1）、地方饭票支付（cardtype == 2）
+    //统计数据
+    [self statisticsActionTypeId:@"4"];
+    
     if (surrounding) {
         
         int count=[LocalData getClickCountWithBid:surrounding.bid];

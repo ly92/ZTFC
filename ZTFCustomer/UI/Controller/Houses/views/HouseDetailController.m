@@ -282,6 +282,8 @@
             }
             [self prepareData];
             
+            [self statisticsAction];
+            
         }else{
              [self presentFailureTips:result[@"message"]];
         }
@@ -295,6 +297,17 @@
     }];
     
 }
+
+
+//统计数据
+- (void)statisticsAction{
+    StatisticsGlobalAPI *statisticsApi = [[StatisticsGlobalAPI alloc] initWithtypeId:@"3" communityId:self.houseDetailModel.community_id];
+    [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
+    [statisticsApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+    }];
+}
+
 
 //楼盘动态列表
 -(void)loadHouseDynamicData{

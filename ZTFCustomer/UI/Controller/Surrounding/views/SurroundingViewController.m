@@ -95,7 +95,8 @@
      
     }
     else{
-        
+        //统计数据
+        [self statisticsAction];
         SHOWTABBAR;
         
     }
@@ -343,6 +344,16 @@
     
 //    [self districtInfomation:provinceid cityid:cityid];
 }
+
+//统计数据
+- (void)statisticsAction{
+    StatisticsGlobalAPI *statisticsApi = [[StatisticsGlobalAPI alloc] initWithtypeId:@"6" communityId:@""];
+    [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
+    [statisticsApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+    }];
+}
+
 
 #pragma mark-加载数据
 

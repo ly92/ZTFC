@@ -38,6 +38,20 @@
     [self loadCommunity];
     [self loadRepairData];
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadRepairData) name:@"REFRESH_REPAIR" object:nil];
+    
+    //统计数据
+    [self statisticsAction];
+}
+
+//统计数据
+- (void)statisticsAction{
+    UserModel *user = [[LocalData shareInstance]getUserAccount];
+    Community *community = [STICache.global objectForKey:[NSString stringWithFormat:@"%@_crcc",user.mobile]];
+    StatisticsGlobalAPI *statisticsApi = [[StatisticsGlobalAPI alloc] initWithtypeId:@"2" communityId:community.bid];
+    [[BaseNetConfig shareInstance]configGlobalAPI:ICE];
+    [statisticsApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

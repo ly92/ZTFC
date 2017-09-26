@@ -33,3 +33,4 @@
 #import "DeleteAddressAPI.h"
 #import "GetPayOrderListAPI.h"
 #import "ConfirmOrderAPI.h"
+#import "StatisticsGlobalAPI.h"

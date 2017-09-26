@@ -203,6 +203,8 @@
 #define PERSON_PROJECTCOLLECT_LIST @"YDSL/member/project/favoriteList"//楼盘收藏列表
 #define PERSON_HOUSETYPECOLLECT_LIST @"YDSL/member/houseType/favoriteList"//户型收藏列表
 
+#define STATISTICS_GLOBAL_API @"YDSL/member/dataLog/create"//数据统计
+
 #pragma mark - 消息中心
 
 //消息列表

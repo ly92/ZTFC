@@ -744,6 +744,7 @@
 		087761EB1DCC6EB20016D68D /* CollectHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 087761EA1DCC6EB20016D68D /* CollectHouseViewController.m */; };
 		087761EF1DCC75780016D68D /* CollectHouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 087761ED1DCC75780016D68D /* CollectHouseCell.m */; };
 		087761F01DCC75780016D68D /* CollectHouseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087761EE1DCC75780016D68D /* CollectHouseCell.xib */; };
+		08D698311F7A93F3008D5DAD /* StatisticsGlobalAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D698301F7A93F3008D5DAD /* StatisticsGlobalAPI.m */; };
 		1248E9D91D9647C400485E13 /* CashierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1248E9D81D9647C400485E13 /* CashierViewController.m */; };
 		12658C661DDB53A100E30A4B /* PropertyMessageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12658C651DDB53A100E30A4B /* PropertyMessageDetailController.m */; };
 		126EB2C11DCF1D2F006A130B /* PropertyMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126EB2C01DCF1D2F006A130B /* PropertyMessageController.m */; };
@@ -2156,6 +2157,8 @@
 		087761EC1DCC75780016D68D /* CollectHouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectHouseCell.h; sourceTree = "<group>"; };
 		087761ED1DCC75780016D68D /* CollectHouseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectHouseCell.m; sourceTree = "<group>"; };
 		087761EE1DCC75780016D68D /* CollectHouseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectHouseCell.xib; sourceTree = "<group>"; };
+		08D6982F1F7A93F3008D5DAD /* StatisticsGlobalAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsGlobalAPI.h; sourceTree = "<group>"; };
+		08D698301F7A93F3008D5DAD /* StatisticsGlobalAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsGlobalAPI.m; sourceTree = "<group>"; };
 		1248E9D71D9647C400485E13 /* CashierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashierViewController.h; sourceTree = "<group>"; };
 		1248E9D81D9647C400485E13 /* CashierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashierViewController.m; sourceTree = "<group>"; };
 		12658C641DDB53A100E30A4B /* PropertyMessageDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyMessageDetailController.h; sourceTree = "<group>"; };
@@ -3731,6 +3734,7 @@
 		043FF08D1D8E3DAE0021E808 /* api */ = {
 			isa = PBXGroup;
 			children = (
+				08D6982E1F7A93B6008D5DAD /* statistics */,
 				04CCE53F1D924172008155CB /* Payment */,
 				043FF08E1D8E3DAE0021E808 /* CommunityActivity */,
 				043FF0911D8E3DAE0021E808 /* Complaint */,
@@ -5251,6 +5255,15 @@
 			path = MyDrop;
 			sourceTree = "<group>";
 		};
+		08D6982E1F7A93B6008D5DAD /* statistics */ = {
+			isa = PBXGroup;
+			children = (
+				08D6982F1F7A93F3008D5DAD /* StatisticsGlobalAPI.h */,
+				08D698301F7A93F3008D5DAD /* StatisticsGlobalAPI.m */,
+			);
+			name = statistics;
+			sourceTree = "<group>";
+		};
 		128D3D5E1DE14E87004308CF /* Jpush */ = {
 			isa = PBXGroup;
 			children = (
@@ -5769,6 +5782,7 @@
 				043FF2BC1D8E3DAE0021E808 /* FeedbackAPI.m in Sources */,
 				04CAC4281D8FD4010086DC9F /* RechargeController.m in Sources */,
 				04CCE53D1D923D4F008155CB /* PropertyAddressCell.m in Sources */,
+				08D698311F7A93F3008D5DAD /* StatisticsGlobalAPI.m in Sources */,
 				043FF3BB1D8E3DAE0021E808 /* MoreHouseTypeCell.m in Sources */,
 				043FF2CD1D8E3DAE0021E808 /* CardPromotionModel.m in Sources */,
 				043FECDE1D8E3C040021E808 /* BaseUrlFilter.m in Sources */,
