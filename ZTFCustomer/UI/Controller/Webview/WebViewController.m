@@ -352,6 +352,7 @@
     NSString *communityid = @"";
     NSString *cmd = @"";
     
+    
     UserModel *user = [[LocalData shareInstance] getUserAccount];
     cid = [NSString stringWithFormat:@"%@",user.cid];
     NSDate *date = [NSDate date];
@@ -360,8 +361,9 @@
     token = [[NSString stringWithFormat:@"%@%@%@",cid,kkToken,timestamp] MD5Hash];
     appid = APP_ID;
     
-    Community *communityDic  = [STICache.global objectForKey:user.mobile];
-    communityid = [NSString stringWithFormat:@"%@", communityDic.bid ];
+//    Community *communityDic  = [STICache.global objectForKey:user.mobile];
+    Community *community = [STICache.global objectForKey:[NSString stringWithFormat:@"%@_crcc",user.mobile]];
+    communityid = [NSString stringWithFormat:@"%@", community.bid ];
     
     if (pushCmd.length == 0) {
         cmd = @"home";
